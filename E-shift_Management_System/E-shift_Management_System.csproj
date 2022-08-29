@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EF91D01-EB50-4B0C-B02C-08F2B80C61AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>E_shift_Management_System</RootNamespace>
+    <AssemblyName>E-shift_Management_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>C:\Users\User\Documents\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>C:\Users\User\Documents\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>C:\Users\User\Documents\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>C:\Users\User\Documents\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>C:\Users\User\Documents\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomers.Designer.cs">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPayments.Designer.cs">
+      <DependentUpon>AddPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProducts.Designer.cs">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUsers.Designer.cs">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.Designer.cs">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDashboard.Designer.cs">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerModuleForm.Designer.cs">
+      <DependentUpon>CustomerModuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerView.Designer.cs">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBconnection.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Feedback.cs" />
+    <Compile Include="Feedbacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedbacks.Designer.cs">
+      <DependentUpon>Feedbacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrder.cs" />
+    <Compile Include="NewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrders.Designer.cs">
+      <DependentUpon>NewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_History.Designer.cs">
+      <DependentUpon>Order_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering.Designer.cs">
+      <DependentUpon>Ordering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opening.Designer.cs">
+      <DependentUpon>Opening.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationReport.Designer.cs">
+      <DependentUpon>OperationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operations.cs" />
+    <Compile Include="Operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation.Designer.cs">
+      <DependentUpon>Operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetails.cs" />
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportDetails.Designer.cs">
+      <DependentUpon>TransportDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransportUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransportUnit.Designer.cs">
+      <DependentUpon>TransportUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="_E_shift_Management_SystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_shift_Management_SystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_shift_Management_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_shift_Management_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_shift_Management_SystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_shift_Management_SystemDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_shift_Management_SystemDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_shift_Management_SystemDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_E_shift_Management_SystemDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_E_shift_Management_SystemDataSet4.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCustomers.resx">
+      <DependentUpon>AddCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPayments.resx">
+      <DependentUpon>AddPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProducts.resx">
+      <DependentUpon>AddProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUsers.resx">
+      <DependentUpon>AddUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminLogin.resx">
+      <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDashboard.resx">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerModuleForm.resx">
+      <DependentUpon>CustomerModuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerView.resx">
+      <DependentUpon>CustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedbacks.resx">
+      <DependentUpon>Feedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrders.resx">
+      <DependentUpon>NewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opening.resx">
+      <DependentUpon>Opening.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation.resx">
+      <DependentUpon>Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationReport.resx">
+      <DependentUpon>OperationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_History.resx">
+      <DependentUpon>Order_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering.resx">
+      <DependentUpon>Ordering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportDetails.resx">
+      <DependentUpon>TransportDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransportUnit.resx">
+      <DependentUpon>TransportUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_E_shift_Management_SystemDataSet.xsc">
+      <DependentUpon>_E_shift_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_shift_Management_SystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet.xss">
+      <DependentUpon>_E_shift_Management_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet1.xsc">
+      <DependentUpon>_E_shift_Management_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_shift_Management_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet1.xss">
+      <DependentUpon>_E_shift_Management_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet2.xsc">
+      <DependentUpon>_E_shift_Management_SystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_shift_Management_SystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet2.xss">
+      <DependentUpon>_E_shift_Management_SystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet3.xsc">
+      <DependentUpon>_E_shift_Management_SystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_shift_Management_SystemDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet3.xss">
+      <DependentUpon>_E_shift_Management_SystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet4.xsc">
+      <DependentUpon>_E_shift_Management_SystemDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_E_shift_Management_SystemDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_E_shift_Management_SystemDataSet4.xss">
+      <DependentUpon>_E_shift_Management_SystemDataSet4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-6169051.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-6169668.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-cottonbro-4554249.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC_4055 copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_cart_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-61690511.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-61690512.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-cottonbro-45542491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-cottonbro-45542492.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_100px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male_user_100px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_shield_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_shield_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_shield_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purchase_order_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courier_lorry_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_52px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_bag_bitcoin_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Bag Franc_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joyent_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_52px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
